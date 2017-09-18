@@ -1,0 +1,3 @@
+SSH_allowed_IP_space: 206.108.127.0/24
+allow_kube: 206.108.127.0/24
+

@@ -3,9 +3,19 @@
     url: 'https://packages.cloud.google.com/apt/doc/apt-key.gpg'
     state: present
 
+- name: Install Docker APT repo GPG key
+  apt_key:
+    url: 'https://download.docker.com/linux/ubuntu/gpg'
+    state: present
+
 - name: Setup k8s APT repo
   apt_repository:
     repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+
+- name: Setup Docker APT repo
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
     state: present
 
 - name: Install docker and kubernetes packages
@@ -14,11 +24,11 @@
     state: installed
     update_cache: yes
   with_items:
-    - docker.io=1.12.6-0ubuntu1~16.04.1
-    - kubelet=1.7.0-00
-    - kubeadm=1.7.0-00
-    - kubectl=1.7.0-00
-    - kubernetes-cni=0.5.1-00
+    - docker-ce
+    - kubelet
+    - kubeadm
+    - kubectl
+    - kubernetes-cni
 
 - name: add hosts
   lineinfile:

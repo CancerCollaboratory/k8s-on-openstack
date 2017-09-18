@@ -1,0 +1,14 @@
+export OS_USERNAME="CHANGEME"
+export OS_PASSWORD="CHANGEME"
+export OS_PROJECT_NAME="CHANGEME"
+export OS_PROJECT_ID="CHANGEME"
+export OS_AUTH_URL="https://console.cancercollaboratory.org:5000/v2.0"
+export OS_REGION_NAME=Toronto
+export KEY=CHANGEME
+export IMAGE="Ubuntu 16.04 - latest"
+export NETWORK=CHANGEME
+export SUBNET_UUID=CHANGEME
+export FLOATING_IP_NETWORK_UUID=11a3be73-c278-449c-a428-2522a2563c79
+export NODE_MEMORY=7
+export MASTER_BOOT_FROM_VOLUME=False
+export MASTER_MEMORY=8
